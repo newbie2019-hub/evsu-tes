@@ -27,7 +27,7 @@ class PostController extends Controller
             $update->update($request->validated());
             return $this->success('Update saved!');
         } else {
-            return $this->error('Update not found.');
+            return $this->error('Update not saved.');
         }
     }
 
