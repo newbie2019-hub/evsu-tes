@@ -15,6 +15,8 @@ const CreateUpdate = () =>
     import ('@/views/pages/admin/Updates/NewUpdate.vue')
 const EditUpdate = () =>
     import ('@/views/pages/admin/Updates/EditUpdate.vue')
+const ViewUpdate = () =>
+    import ('@/views/pages/admin/Updates/ViewUpdate.vue')
 
 const Settings = () =>
     import ('@/views/pages/admin/Settings.vue')
@@ -70,6 +72,13 @@ const routes = [{
                 name: 'editupdate',
                 components: {
                     editupdate: EditUpdate
+                }
+            },
+            {
+                path: 'updates/view/:slug',
+                name: 'viewupdate',
+                components: {
+                    viewupdate: ViewUpdate
                 }
             },
             {

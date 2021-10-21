@@ -31,6 +31,17 @@ class PostController extends Controller
         }
     }
 
+    public function view($id)
+    {
+        $update = Update::find($id);
+
+        if(!empty($update)){
+            return response()->json(Update::get());
+        } else {
+            return $this->error('Update not fouind.');
+        }
+    }
+
     public function destroy($id)
     {
         Update::destroy($id);

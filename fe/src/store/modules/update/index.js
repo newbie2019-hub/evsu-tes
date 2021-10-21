@@ -8,6 +8,11 @@ export default {
             post_content: '',
             post_excerpt: '',
         },
+        view_update: {
+            title: '',
+            post_content: '',
+            post_excerpt: '',
+        },
         updates: {
             data: []
         },
@@ -21,6 +26,9 @@ export default {
         },
         SET_EDIT_UPDATE(state, { data }) {
             state.edit_update = data
+        },
+        SET_VIEW_UPDATE(state, { data }) {
+            state.view_update = data
         },
     },
     actions: {
@@ -45,6 +53,15 @@ export default {
         },
         async editUpdate({ commit }, data) {
             const res = await API.put(`/admin/post/${data.id}`, data).then(res => {
+                return res;
+            }).catch(err => {
+                return err.response;
+            })
+
+            return res;
+        },
+        async viewUpdate({ commit }, data) {
+            const res = await API.get(`/admin/post/view/${data.id}`, data).then(res => {
                 return res;
             }).catch(err => {
                 return err.response;

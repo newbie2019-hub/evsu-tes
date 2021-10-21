@@ -8,7 +8,7 @@
     <v-row class="mt-4" justify="center">
       <p v-if="updates.data.length == 0" class="grey--text mt-15 text-center pl-4">It appears that you don't have any updates yet.</p>
       <v-col md="7" lg="6">
-          <v-card elevation="1" class="mt-5" v-for="(update, i) in updates.data" :key="i">
+          <v-card elevation="1" class="mt-5" v-for="(update, i) in updates.data" :key="i" @click="setViewUpdate(update)">
           <v-row class="pr-3 pt-2" justify="end">
           <v-menu bottom  transition="slide-x-transition">
             <template v-slot:activator="{ on, attrs }">
@@ -124,6 +124,10 @@ export default {
     setEditUpdate(data) {
       this.$store.commit('updates/SET_EDIT_UPDATE', { data: data });
       this.$router.push({ name: 'editupdate', params: { slug: data.id } });
+    },
+    setViewUpdate(data) {
+      this.$store.commit('updates/SET_VIEW_UPDATE', { data: data });
+      this.$router.push({ name: 'viewupdate', params: { slug: data.id } });
     },
     async deletePost(){
       const {status, data} = await this.$store.dispatch('updates/deleteUpdate', this.delete_data)

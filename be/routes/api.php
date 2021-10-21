@@ -28,4 +28,5 @@ Route::group(['middleware' => 'api', 'prefix' => 'auth'], function () {
 
 Route::group(['prefix' => 'admin'], function (){
     Route::apiResource('post', PostController::class);
+    Route::get('post/view/{id}', [PostController::class, 'view']);
 });

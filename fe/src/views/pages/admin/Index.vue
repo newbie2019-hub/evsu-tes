@@ -7,6 +7,7 @@
     <router-view name="settings"/>
     <router-view name="updates"/>
     <router-view name="editupdate"/>
+    <router-view name="viewupdate"/>
     <router-view name="createupdate"/>
   </div>
 </template>
