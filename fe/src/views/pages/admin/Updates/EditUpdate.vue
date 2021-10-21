@@ -33,8 +33,8 @@
           v-model="data.post_content"
           @image-added="handleImageAdded"
         />
-        <v-btn depressed type="submit" color="success" class="mt-4">
-          Save
+        <v-btn depressed type="submit" color="primary" class="mt-4">
+          Update
         </v-btn>
       </v-form>
    </v-container>
