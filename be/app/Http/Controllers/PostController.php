@@ -19,9 +19,16 @@ class PostController extends Controller
         return $this->success('Update created successfully!');
     }
 
-    public function update(Request $request, $id)
+    public function update(PostRequest $request, $id)
     {
-        //
+        $update = Update::find($id);
+
+        if(!empty($update)){
+            $update->update($request->validated());
+            return $this->success('Update saved!');
+        } else {
+            return $this->error('Update not found.');
+        }
     }
 
     public function destroy($id)

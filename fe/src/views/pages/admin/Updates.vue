@@ -18,7 +18,8 @@
             </template>
             <v-list>
             <v-list-item>
-              <v-btn small depressed rounded text>
+              <v-btn small depressed rounded text
+              @click="setEditUpdate(update)">
                 <v-icon small>mdi-pencil-outline</v-icon>
               Update
               </v-btn>
@@ -101,7 +102,6 @@ export default {
   computed: {
    ...mapState('auth', ['user']),
     ...mapState('updates', ['updates'])
-
   },
   async mounted(){
    this.initialLoading = true
@@ -121,12 +121,16 @@ export default {
         this.msg = 'Good Evening'
       }
     },
+    setEditUpdate(data) {
+      this.$store.commit('updates/SET_EDIT_UPDATE', { data: data });
+      this.$router.push({ name: 'editupdate', params: { slug: data.id } });
+    },
     async deletePost(){
       const {status, data} = await this.$store.dispatch('updates/deleteUpdate', this.delete_data)
       this.checkStatus(data, status, '', 'updates/getUpdates')
       this.delete_data.id = ''
     }
-  }
+  },
 }
 </script>
 <style scoped>
