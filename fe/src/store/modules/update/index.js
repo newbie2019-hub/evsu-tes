@@ -44,7 +44,7 @@ export default {
             return res;
         },
         async editUpdate({ commit }, data) {
-            const res = await API.post(`/admin/post/edit/${data.id}`, data).then(res => {
+            const res = await API.put(`/admin/post/${data.id}`, data).then(res => {
                 return res;
             }).catch(err => {
                 return err.response;
