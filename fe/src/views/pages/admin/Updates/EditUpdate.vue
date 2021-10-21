@@ -93,6 +93,7 @@ export default {
       this.modalId = modalId.componentId
     }),
     this.data = {
+    id: this.edit_update.id,
     title: this.edit_update.title,
     post_content: this.edit_update.post_content,
     post_excerpt: this.edit_update.post_excerpt,
