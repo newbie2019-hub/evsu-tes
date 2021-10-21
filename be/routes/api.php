@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminAuthController;
+use App\Http\Controllers\PostController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,4 +24,8 @@ Route::group(['middleware' => 'api', 'prefix' => 'auth'], function () {
         Route::post('change_password', [AdminAuthController::class, 'changePassword']);
         Route::post('me', [AdminAuthController::class, 'me']);
     });
+});
+
+Route::group(['prefix' => 'admin'], function (){
+    Route::apiResource('post', PostController::class);
 });

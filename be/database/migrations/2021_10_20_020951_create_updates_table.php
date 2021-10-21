@@ -16,9 +16,9 @@ class CreateUpdatesTable extends Migration
         Schema::create('updates', function (Blueprint $table) {
             $table->id();
             $table->string('title', 40);
-            $table->string('post_excerpt', 120);
+            $table->string('post_excerpt', 125);
             $table->longText('post_content');
-            $table->integer('views');
+            $table->integer('views')->default(0);
             $table->timestamps();
         });
     }

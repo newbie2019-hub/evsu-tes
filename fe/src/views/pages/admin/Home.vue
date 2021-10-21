@@ -7,7 +7,7 @@
    <p class="grey--text lighten-1 caption mt-3">Welcome, Here is your summary</p>
    <v-row class="mt-4">
     <v-col md="">
-     <v-card elevation="1">
+     <v-card elevation="1" class="pa-3">
        <v-list-item three-line>
         <v-list-item-content >
           <v-list-item-title class="text-h5 mb-1  text-center">
@@ -18,18 +18,10 @@
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-      <v-divider></v-divider>
-      <v-card-actions>
-        <v-btn text small color="red accent-4">
-          View All
-        </v-btn>
-      </v-card-actions>
      </v-card>
     </v-col>
-   </v-row>
-   <v-row class="mt-4">
     <v-col md="">
-     <v-card elevation="1">
+     <v-card elevation="1" class="pa-3">
        <v-list-item three-line>
         <v-list-item-content >
           <v-list-item-title class="text-h5 mb-1  text-center">
@@ -40,12 +32,6 @@
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-      <v-divider></v-divider>
-      <v-card-actions>
-        <v-btn small text color="red accent-4">
-          View All
-        </v-btn>
-      </v-card-actions>
      </v-card>
     </v-col>
    </v-row>

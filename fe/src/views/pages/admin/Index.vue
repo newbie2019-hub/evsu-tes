@@ -6,6 +6,7 @@
     <router-view name="scholar"/>
     <router-view name="settings"/>
     <router-view name="updates"/>
+    <router-view name="createupdate"/>
   </div>
 </template>
 <script>

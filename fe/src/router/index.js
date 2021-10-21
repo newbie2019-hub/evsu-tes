@@ -5,7 +5,10 @@ import Login from '../views/auth/Login.vue'
 const Home = () => import('@/views/pages/admin/Home.vue')
 const Records = () => import('@/views/pages/admin/Records.vue')
 const Scholar = () => import('@/views/pages/admin/Scholars.vue')
+
 const Updates = () => import('@/views/pages/admin/Updates.vue')
+const CreateUpdate = () => import('@/views/pages/admin/Updates/NewUpdate.vue')
+
 const Settings = () => import('@/views/pages/admin/Settings.vue')
 Vue.use(VueRouter)
 
@@ -46,6 +49,13 @@ const routes = [
         name: 'Updates',
         components: {
           updates: Updates
+        },
+      },
+      {
+        path: 'updates/create',
+        name: 'CreateUpdate',
+        components: {
+          createupdate: CreateUpdate
         },
       },
       {

@@ -23,10 +23,12 @@ Vue.use(Toast, {
   closeButton: false,
   icon: true,
   rtl: false,
-  maxToasts: 3,
+  maxToasts: 2,
   transition: "Vue-Toastification__fade",
   newestOnTop: true
 });
+
+
 
 new Vue({
   vuetify,
@@ -34,3 +36,4 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+

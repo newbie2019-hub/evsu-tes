@@ -2,7 +2,7 @@
 export default {
  data() {
      return {
-         modalId: '',
+         dialog: false,
          isLoading: false,
          initialLoading: false,
      }
@@ -10,9 +10,10 @@ export default {
  methods: {
      async checkStatus(data, status, type, dispatch, config) {
          if (status == 422) {
+            //  console.log(data)
              this.UnprocEntity(data)
          } else if (status == 200) {
-             if (type != 'update' || type != 'register') {
+             if (type != 'update') {
                  await this.$store.dispatch(dispatch, { page: 1, sort: this.sort })
              }
              this.successResponse(data)
@@ -22,6 +23,7 @@ export default {
          this.isLoading = false
      },
      UnprocEntity(data) {
+         console.log(data)
          for (const key of Object.keys(data)) {
              this.$toast.error(data[key][0]);
          }
@@ -38,7 +40,7 @@ export default {
          return this.$toast.error(data.msg)
      },
      closeModal(){
-       this.$bvModal.hide(this.modalId)
+      this.dialog = false
      }
  }
 }

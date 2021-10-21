@@ -12,10 +12,13 @@
     "axios": "^0.23.0",
     "c4.5": "^0.0.3",
     "core-js": "^3.6.5",
+    "quill-image-drop-module": "^1.0.3",
+    "quill-image-resize-vue": "^1.0.4",
     "roboto-fontface": "*",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vue-toastification": "^1.7.14",
+    "vue2-editor": "^2.10.3",
     "vuetify": "^2.4.0",
     "vuex": "^3.6.2"
   },
