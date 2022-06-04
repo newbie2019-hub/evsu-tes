@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">TES C4.5 Qualification</string>
+    <string name="title_activity_main">TES C4.5 Qualification</string>
+    <string name="package_name">com.evsu.tes.c45</string>
+    <string name="custom_url_scheme">com.evsu.tes.c45</string>
+</resources>

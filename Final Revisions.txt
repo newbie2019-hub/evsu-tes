@@ -1,0 +1,14 @@
+a.)  The research is only open to TES grantees. As a result, only they have access to the application. If the students' data in the Records Part is approved by CHED-Unifast to be a grantee of the specified program, all of their data should be automatically transferred to the Accounts section, rather than deleting their names from the Records section.
+[x]
+
+b.) In modern applications, it is common to see the uploading of a profile image that exposes the face of the account owner in every account profile. As mentioned, every user's account profile part should include an upload of their profile image, which will aid in the verification process in the future.	 [x]
+
+c.) In the chat button, a notification might display in the form of a number of unread messages, alerting the user that there are messages that need to be checked.
+
+d.)Import the file for the Masterlist of TES Grantees, Delisted Grantees, Graduated Grantees for cross-checking (this file will be provided by the admin)
+[x]
+
+e.) In the TES form instead of putting the TES form word change it to the other way of presenting like ("Are you willing to send your data to be part of the TES grantees?")-[for these sir were not sure papo ano an pwede nam ig butang na dre hiya TES form an igbutang]
+[x]
+
+f.) After Registration there will be a notification that suggest the user to check that he/ she will be checking his/her email address for verification [x]

@@ -1,0 +1,6 @@
+{
+	"appId": "com.evsu.tes.c45",
+	"appName": "TES C4.5 Qualification",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
